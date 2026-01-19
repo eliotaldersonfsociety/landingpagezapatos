@@ -1,16 +1,17 @@
 import dynamic from 'next/dynamic'
-import { SocialNotificationsWrapper } from "@/components/social-notifications-wrapper"
 import { Hero } from "@/components/hero"
-import AlternatingContents from "@/components/alternativecontent/page"
 import { OrderProcess } from "@/components/order-process"
 import { ProductsWrapper } from "@/components/products-wrapper"
-import { Testimonials } from "@/components/testimonials"
-import { FAQs } from "@/components/faqs/faqs"
-import { DeliveryInfo } from "@/components/delivery-info"
 import { defaultProducts, type Product } from "@/lib/store"
-import { NuestrosClientes } from '@/components/nuestros-clientes'
-import WhatsAppButton from '@/components/whatsapp-button'
-import SmartScarcity from '@/components/SmartScarcity'
+
+const SocialNotificationsWrapper = dynamic(() => import('@/components/social-notifications-wrapper').then(mod => ({ default: mod.SocialNotificationsWrapper })))
+const SmartScarcity = dynamic(() => import('@/components/SmartScarcity'))
+const AlternatingContents = dynamic(() => import('@/components/alternativecontent/page'))
+const Testimonials = dynamic(() => import('@/components/testimonials').then(mod => ({ default: mod.Testimonials })))
+const FAQs = dynamic(() => import('@/components/faqs/faqs').then(mod => ({ default: mod.FAQs })))
+const DeliveryInfo = dynamic(() => import('@/components/delivery-info').then(mod => ({ default: mod.DeliveryInfo })))
+const NuestrosClientes = dynamic(() => import('@/components/nuestros-clientes').then(mod => ({ default: mod.NuestrosClientes })))
+const WhatsAppButton = dynamic(() => import('@/components/whatsapp-button'))
 
 const ResultsCarouselClient = dynamic(() => import('@/components/result-carrousel/results-carousel.client'))
 const AITestimonials = dynamic(() => import('@/components/ai-testimonials'))
