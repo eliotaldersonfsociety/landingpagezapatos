@@ -33,7 +33,7 @@ Olvídate del dolor en los pies.
 Cada par es una experiencia de comodidad 🎉
     `,
     media: "/zapato2.mp4",
-    poster: "/zapato.jpg",
+    poster: "/zapato.webp",
   },
   {
     type: "image",
@@ -41,7 +41,7 @@ Cada par es una experiencia de comodidad 🎉
     titlePart2: "QUE RECORDARÁN 🎁",
     description:
       "Empacados con cuidado y listos para sorprender.\n🎄 Ideales para cumpleaños y fiestas\n🎁 Empaque premium\n😊 Sonrisas garantizadas",
-    media: "/zapatoregalo.png",
+    media: "/zapatoregalo.webp",
   },
   {
     type: "image",
@@ -49,7 +49,7 @@ Cada par es una experiencia de comodidad 🎉
     titlePart2: "TU MEJOR ALIADO 💛",
     description:
       "Suaves, cómodos y diseñados para brindar confort en cualquier lugar.\nUn abrazo que no querrás soltar.",
-    media: "/zapatofuego.png",
+    media: "/zapatofuego.webp",
   },
   {
     type: "image",
@@ -57,7 +57,7 @@ Cada par es una experiencia de comodidad 🎉
     titlePart2: "CONFIABLES PARA SIEMPRE ✅",
     description:
       "Perfectos para el trabajo, el deporte y aventuras diarias.\n✔ Materiales seguros\n✔ Fáciles de limpiar\n✔ Comodidad aprobada",
-    media: "/zapatosparatodos.png",
+    media: "/zapatosparatodos.webp",
   },
   {
     type: "image",

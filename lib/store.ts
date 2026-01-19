@@ -63,7 +63,7 @@ export const defaultProducts: Product[] = [
     description:
       "• Zapatos ideales para correr y caminar\n• Material transpirable y resistente\n• Amortiguación superior para máximo confort\n• Envío gratis incluido",
     price: 40000,
-    image: "/zapatofuego.png",
+    image: "/zapatofuego.webp",
     category: "Deportivos",
   },
 
@@ -72,7 +72,7 @@ export const defaultProducts: Product[] = [
     name: "Zapatos Casual Elegantes",
     description: "Zapatos versátiles para el día a día. Diseño moderno y cómodo para cualquier ocasión.",
     price: 15000,
-    image: "/zapatocasual.png",
+    image: "/zapatocasual.webp",
     category: "Casuales",
   },
   {
@@ -80,7 +80,7 @@ export const defaultProducts: Product[] = [
     name: "Botas de Trabajo Resistentes",
     description: "Botas duraderas y seguras para el trabajo. Protección y comodidad en un solo par.",
     price: 20000,
-    image: "/botas.png",
+    image: "/botas.webp",
     category: "Trabajo",
   },
 ]
