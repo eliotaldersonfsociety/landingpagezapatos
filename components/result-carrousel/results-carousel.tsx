@@ -39,7 +39,7 @@ export function ResultsCarousel({
             >
               {/* PREVIEW IMAGE */}
               <Image
-                src="/zapato.jpg"
+                src="/zapato.webp"
                 alt="Labubu preview"
                 fill
                 sizes="(max-width: 768px) 100vw, 448px"
