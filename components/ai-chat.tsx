@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Send, X } from "lucide-react";
-import * as tf from "@tensorflow/tfjs";
 
 const MAX_LEN = 10;
 
@@ -36,7 +35,6 @@ export default function AIChat() {
     { text: "¡Hola! Soy tu asistente virtual. ¿En qué puedo ayudarte?", isUser: false },
   ]);
   const [input, setInput] = useState("");
-  const [model, setModel] = useState<tf.LayersModel | null>(null);
   const [vocab, setVocab] = useState<Record<string, number>>({});
   const [intents, setIntents] = useState<string[]>([]);
   const [isTyping, setIsTyping] = useState(false);
@@ -142,23 +140,6 @@ export default function AIChat() {
     }
     if (lowerText.match(/\b(color|colores|qué color|tienen color|negro|blanco|rojo|azul|verde)\b/)) {
       return "colors";
-    }
-
-    // Usar el modelo de TensorFlow.js si no coincide con ninguna regla
-    if (model && Object.keys(vocab).length > 0) {
-      try {
-        const vector = vectorize(lowerText);
-        const inputTensor = tf.tensor2d([vector]);
-        const prediction = model.predict(inputTensor) as tf.Tensor;
-        const predictedIntentIndex = prediction.argMax(1).dataSync()[0];
-        const predictedIntent = intents[predictedIntentIndex];
-        inputTensor.dispose();
-        prediction.dispose();
-        return predictedIntent || "default";
-      } catch (error) {
-        console.error("Error al predecir el intent:", error);
-        return "default";
-      }
     }
 
     return "default";

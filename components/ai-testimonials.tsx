@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import * as tf from "@tensorflow/tfjs"
 import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
